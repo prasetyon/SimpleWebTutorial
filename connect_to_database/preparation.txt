@@ -1,0 +1,32 @@
+Things we need:
+1. XAMPP
+- download it at https://www.apachefriends.org/download.html
+- include apache and database (mariaDB and mySql)
+2. Text Editor
+- u can use notepad++, bracket, or sublime text
+
+Then we have to:
+1. Make database
+	1. Create database
+	2. Create table
+	3. Insert values
+2. Download the web design template
+	1. download it
+	2. move it into C/xampp/htdocs
+		- directory for every web design used in xampp
+3. Make a connection between web design and database
+	1. Create "connect.php"
+	2. Paste the code below"
+	<?php
+ 	 $host = "localhost";		// your host: localhost, if using xampp
+	 $user = "root";		// your database username
+	 $pass = "";			// your database password
+	 $db = "news";			// your database name
+ 
+ 	 mysql_connect($host, $user, $pass)) or die (mysql_error());	// connect mysql
+	 mysql_select_db($db) or die (mysql_error()); 			// connect database
+	3. Open xampp, start the Apache and MySQL
+	4. Try to access localhost/android/connect.php
+		- if it succesfully connect, it will show "sukses"
+	 *if u think that ur connection is good, just remove the if-else statement
+4. Design your web!
